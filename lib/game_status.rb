@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [6,4,2]
 ]
 def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
+  WIN_COMBINATIONS.include do |combo|
     board[combo[0]] == board[combo[1]] &&
     board[combo[1]] == board[combo[2]] &&
     position_taken?(board, combo[0])
